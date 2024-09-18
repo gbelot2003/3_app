@@ -1,0 +1,6 @@
+openai
+flask
+langchain
+chromadb
+pandas
+PyPDF2

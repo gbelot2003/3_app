@@ -1,0 +1,19 @@
+<!-- templates/chat.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat con GPT</title>
+</head>
+<body>
+    <h1>Chat con GPT</h1>
+    <form method="post">
+        <input type="text" name="user_input" placeholder="Escribe tu mensaje" required>
+        <button type="submit">Enviar</button>
+    </form>
+    {% if assistant_response %}
+        <p><strong>Tú:</strong> {{ user_input }}</p>
+        <p><strong>Asistente:</strong> {{ assistant_response }}</p>
+    {% endif %}
+</body>
+</html>

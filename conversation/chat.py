@@ -17,6 +17,7 @@ class Chat:
         user_message = self.messages[-1]['content']
         print(f"User: {user_message}")
         action_response = self.action_handler.handle_intent(user_message)
+        print(f"Action: {action_response}")
         
         if action_response:
             assistant_message = action_response

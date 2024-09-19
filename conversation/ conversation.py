@@ -2,12 +2,13 @@
 import os
 import openai
 from utils.dependency_injector import build_action_handler
+openai.api_key = os.getenv("OPENAI_API_KEY")  # Reemplaza con tu clave de API
 
 class Conversation:
     def __init__(self):
         self.messages = []
         self.action_handler = build_action_handler()
-        openai.api_key = os.getenv("OPENAI_API_KEY")  # Reemplaza con tu clave de API
+        pass
 
     def add_message(self, role, content):
         self.messages.append({'role': role, 'content': content})

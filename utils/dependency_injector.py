@@ -1,6 +1,6 @@
 # utils/dependency_injector.py
 from services.api_service import ApiService
-from services import  chroma_service as ChromaService
+from services.chroma import ChromaService
 from services.file_processing_service import FileProcessingService
 from intents.api_intent import ApiIntent
 from intents.chroma_query_intent import ChromaQueryIntent

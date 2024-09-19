@@ -1,6 +1,6 @@
 # app.py
 from flask import Flask, render_template, request
-from conversation.conversation import Conversation  # Importa desde el paquete directamente
+from conversation.chat import Chat as Conversation # Importa desde el paquete directamente
 
 app = Flask(__name__)
 conversation = Conversation()

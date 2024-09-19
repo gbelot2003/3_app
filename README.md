@@ -52,11 +52,11 @@ Este proyecto es una aplicación web desarrollada con Flask que integra el model
 ├── app.py
 ├── conversation
 │   ├── __init__.py
-│   └── conversation.py
+│   └── Chat.py
 ├── services
 │   ├── __init__.py
 │   ├── api_service.py
-│   ├── chroma_service.py
+│   ├── chroma.py
 │   └── file_processing_service.py
 ├── intents
 │   ├── __init__.py

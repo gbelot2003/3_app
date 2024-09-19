@@ -1,18 +1,10 @@
-# app.py
-from flask import Flask, render_template, request
-from conversation.chat import Chat as Conversation # Importa desde el paquete directamente
+from flask import Flask
+from routes.chat_routes import chat_bp  # Asegúrate de que la ruta sea correcta
 
 app = Flask(__name__)
-conversation = Conversation()
 
-@app.route('/', methods=['GET', 'POST'])
-def chat():
-    if request.method == 'POST':
-        user_input = request.form['user_input']
-        conversation.add_message('user', user_input)
-        assistant_response = conversation.get_response()
-        return render_template('chat.html', user_input=user_input, assistant_response=assistant_response)
-    return render_template('chat.html')
+# Registrar el blueprint
+app.register_blueprint(chat_bp)
 
 if __name__ == '__main__':
     app.run(debug=True)
